@@ -1,0 +1,391 @@
+<!DOCTYPE html>	
+<head>
+	<title>It's Easy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-xl navbar-dark fixed-top" style="background-color: #B71C1C">
+     <a class="navbar-brand" href="#"><img src="brandImage.png" width="50" height="50" class="d-inline-block align-center rounded-circle" alt=""><b class="ml-1 brand-font">It'sEasy</b></a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSuppportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+     </button>
+
+     <div class="collapse navbar-collapse mt-5 mt-xl-0" id="navbarContent">
+       <ul class="navbar-nav mr-auto ml-1">
+          <li class="nav-item active menu">
+             <a class="nav-link" href="#">Chat<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item menu">
+             <a class="nav-link" href="#">What's Trending?</a>
+          </li>
+          <li class="nav-item dropdown menu">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Buy
+             </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Movie Tickets</a>
+                <a class="dropdown-item" href="#">Recharge</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Send Money</a>
+             </div>
+          </li>
+          <li class="nav-item menu">
+             <a class="nav-link" href="#">It'sEasy-wallet</a>
+          </li>
+       </ul>
+       <span class="d-none d-lg-inline menu" style="color: cyan">Sync messages!</span>
+       <!--button with tooltip-->
+       <button class="btn d-none d-lg-inline btn-outline-info mr-5 mr-lg-4 ml-1" data-toggle="tooltip" data-placement="bottom" title="Sync now"><i class="fas fa-sync-alt"></i></button>
+       <button class="btn btn-outline-warning menu mr-5" data-toggle="tooltip" data-placement="bottom" title="Account Settings"><i class="fas fa-cog"></i></button>
+       <form class="form-inline my-2 my-lg-2 my-xl-0">
+           <input class="form-control mr-sm-2 menu" type="search" placeholder="Search for a contact" aria-label="Search">
+           <button class="btn btn-outline-success menu my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+       </form>
+     </div>
+  </nav>
+
+<!--nav-pills-tabs-->
+  <ul class="nav nav-pills nav-fill d-flex justify-content-around mb-0 mt-5 pt-4 custom fixed-top" id="pills-tab" role="tablist">
+    <li class="nav-item">
+       <a class="nav-link active" id="pills-messages-tab" data-toggle="pill" href="#pills-messages" role="tab" aria-controls="pills-messages" aria-selected="true">Messages</a>
+    </li>
+    <li class="nav-item">
+       <a class="nav-link" id="pills-activeChat-tab" data-toggle="pill" href="#pills-activeChat" role="tab" aria-controls="pills-activeChat" aria-selected="false">Active Chat</a>
+    </li>
+    <li class="nav-item">
+       <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-messages" role="tabpanel" aria-labelledby="pills-messages-tab">
+
+        <!--Message Tab, this is the main page, it also contains unread msgs-->
+
+         <div class="container mt-5 pt-5" style="background-color: #EF5350">
+             <div class="row d-flex flex-row mt-3 mt-md-1">
+                <div class="col-4 col-md-3 col-lg-2 d-flex align-items-center"> 
+                    <img src="johnCena.png" class="rounded-circle mx-auto my-1 mt-md-4 mb-md-3 message-dp">
+                </div>
+                <div class="col-5 col-lg-7 d-flex flex-column">
+                    <div class="row mt-1 mt-md-3">
+                        <div class="col-12">
+                           <h4 class="font-color contact-name name-pad">John</h4>
+                        </div>
+                    </div>
+                    <div class="row font-color">
+                        <div class="col-12 mt-md-1 mb-1 mb-sm-0 chat-font">
+                           <strong>Hey, I will beat Brock Lesnar.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 col-3 d-flex flex-column">
+                    <div class="row flex-row">
+                       <div class="col d-flex flex-row mt-2 mt-xl-3 justify-content-end font-color chat-font time">
+                           3mins ago
+                       </div>
+                    </div>
+                    <div class="row flex-row mt-3 mb-1 mr-2 mr-sm-0">
+      	               <div class="col font-color d-flex justify-content-end">
+      		                 <span class="badge badge-info chat-font">3</span>
+      	               </div>
+                    </div>
+                </div>
+             </div>
+
+    
+            <div class="row d-flex flex-row border-top border-primary">
+                <div class="col-4 col-md-3 col-lg-2 d-flex align-items-center"> 
+                   <img src="brockLS.jpg" class="rounded-circle mx-auto my-1 my-md-3 message-dp">
+                </div>
+                <div class="col-5 col-lg-7 d-flex flex-column">
+                    <div class="row mt-1 mt-md-3">
+                       <div class="col-12">
+                         <h4 class="font-color">Brock</h4>
+                       </div>
+                    </div>
+                    <div class="row font-color">
+                        <div class="col-12 mt-md-1 mb-1 mb-sm-0 chat-font">
+                           <strong>Where is Roman Reigns?</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 col-3 d-flex flex-column">
+                   <div class="row flex-row">
+                       <div class="col d-flex flex-row mt-1 justify-content-end font-color chat-font">
+                          10mins ago
+                       </div>
+                   </div>
+                   <div class="row flex-row mt-3 mb-2 mr-2 mr-sm-0">
+      	               <div class="col font-color d-flex justify-content-end">
+      		                 <span class="badge badge-info chat-font">1</span>
+      	               </div>
+                   </div>
+                </div>
+            </div>
+
+            <div class="row d-flex flex-row border-top border-primary">
+                <div class="col-4 col-md-3 col-lg-2 d-flex align-items-center"> 
+                   <img src="AJS.jpg" class="rounded-circle mx-auto my-1 my-md-3 message-dp">
+                </div>
+                <div class="col-5 col-lg-7 d-flex flex-column">
+                    <div class="row mt-1 mt-md-3">
+                       <div class="col-12">
+                          <h4 class="font-color">Aj</h4>
+                       </div>
+                   </div>
+                   <div class="row font-color">
+                        <div class="col-12 mt-md-1 mb-1 mb-sm-0 chat-font">
+        	                  <i class="fas fa-check"></i>
+                               Congrats for your win, Champ
+                        </div>
+                   </div>
+                </div>
+                <div class="col-md-4 col-lg-3 col-3 d-flex flex-column">
+                    <div class="row flex-row">
+                       <div class="col d-flex flex-row mt-1 justify-content-end font-color chat-font">
+                           18:00
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-flex flex-row border-top border-primary">
+               <div class="col-4 col-md-3 col-lg-2 d-flex align-items-center"> 
+                   <img src="orton.jpg" class="rounded-circle mx-auto my-1 my-md-3 message-dp">
+               </div>
+               <div class="col-5 col-lg-7 d-flex flex-column">
+                   <div class="row mt-1 mt-md-3">
+                      <div class="col-12">
+                         <h4 class="font-color">Orton</h4>
+                      </div>
+                  </div>
+                  <div class="row font-color">
+                      <div class="col-12 mt-md-1 mb-1 mb-sm-0 chat-font">
+        	               <i class="fas fa-video"></i>
+                          Have a look...
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-lg-3 col-3 d-flex flex-column">
+                   <div class="row flex-row">
+                       <div class="col d-flex flex-row mt-1 justify-content-end font-color chat-font">
+                          30/05/18
+                       </div>
+                   </div>
+               </div>
+            </div>
+ 
+
+            <div class="row d-flex flex-row border-top border-primary">
+               <div class="col-4 col-md-3 col-lg-2 d-flex align-items-center"> 
+                   <img src="wwe.jpg" class="rounded-circle mx-auto my-1 my-md-3 message-dp">
+               </div>
+               <div class="col-5 col-lg-7 d-flex flex-column">
+                   <div class="row mt-1 mt-md-3">
+                       <div class="col-12">
+                          <h4 class="font-color">WWE fans</h4>
+                       </div>
+                   </div>
+                   <div class="row text-muted">
+                       <div class="col-12 mt-md-1 mb-1 mb-sm-0 chat-font">
+        	                 <i class="fas fa-volume-off"></i>
+                              this group is muted
+                      </div>
+                   </div>
+               </div>
+               <div class="col-md-4 col-lg-3 col-3 d-flex flex-column">
+                    <div class="row flex-row">
+                       <div class="col d-flex flex-row mt-1 justify-content-end font-color chat-font">
+                          26/05/18
+                       </div>
+                    </div>
+               </div>
+            </div>
+ 
+            <div class="row d-flex flex-row border-top border-primary">
+               <div class="col-4 col-md-3 col-lg-2 d-flex align-items-center"> 
+                    <img src="rock.jpg" class="rounded-circle mx-auto my-1 my-md-3 message-dp">
+               </div>
+               <div class="col-5 col-lg-7 d-flex flex-column">
+                   <div class="row mt-1 mt-md-3">
+                      <div class="col-12">
+                         <h4 class="font-color">Superstar</h4>
+                      </div>
+                   </div>
+                   <div class="row font-color">
+                        <div class="col-12 mt-md-1 mb-1 mb-sm-0 chat-font">
+        	                 <i class="fas fa-check"></i>
+        	                    What are you cooking?
+                        </div>
+                   </div>
+               </div>
+               <div class="col-md-4 col-lg-3 col-3 d-flex flex-column">
+                   <div class="row flex-row">
+                       <div class="col d-flex flex-row mt-1 justify-content-end font-color chat-font">
+                           24/05/18
+                       </div>
+                   </div>
+               </div>
+            </div>
+         </div> 	
+      </div>
+      <div class="tab-pane fade" id="pills-activeChat" role="tabpanel" aria-labelledby="pills-activeChat-tab">
+          <!--This the active chat tab, it contains messages with an individual-->
+          <div class="container mt-5 pt-5" style="background-color: black">
+              <div class="row flex-row mt-5 pt-5 mx-md-3 fixed-top" style="background-color: #EF5350; z-index: 2">
+      		       <div class="col-3 col-sm-3 mt-3 mt-md-3 col-md-2 d-flex">
+      		          <img src="johnCena.png" class="rounded-circle mx-auto my-1 my-md-3 chat-dp">
+      		       </div>
+      		       <div class="col-4 col-sm-5 col-md-6 mt-3 mt-sm-3 mt-md-4 col-xl-6 d-flex flex-column chat-font">
+      		          <h4 class="contact-name name-pad">John</h4>
+      		          <div class="row flex-column">
+      			            <div class="col">
+      				             online
+      			           </div>
+      		         </div>
+      		       </div>
+      		       <div class="col-5 col-sm-4 col-xl-4 d-flex flex-row mt-4 mt-sm-5 justify-content-around">
+      		 	          <i class="fas fa-video chat-icon icon-pad"></i>
+      		 	          <i class="fas fa-phone chat-icon icon-pad"></i>
+      		 	          <i class="fas fa-ellipsis-v chat-icon icon-pad mr-1 mr-sm-0"></i>
+      		       </div>
+      	     </div> 
+      
+      	     <div class="row mt-3 mt-sm-4 mt-lg-5 pt-5">
+      	  	      <div class="col-4 mt-5 col-sm-3 col-lg-2 col-xl-2 rounded chat-font chat-color">
+      	  		        Hi, can you see me?
+      	  		        <span class="text-muted">11:30</span>
+      	  	      </div>
+      	     </div>
+      	     <div class="row mt-3">
+      	  	       <div class="col-4 offset-8 col-lg-3 offset-lg-9 rounded chat-font chat-color">
+      	  		         Hi, John wassup??
+      	  		         <i class="fas fa-check"></i>
+      	  		         <i class="fas fa-check-square"></i>
+      	  		         <span class="text-muted">11:31</span>
+      	  	       </div>
+      	     </div>
+      	     <div class="row mt-3">
+      	  	       <div class="col-5 col-lg-3 rounded chat-font chat-color">
+      	  		         Why are you not watching wwe? hmmm
+      	  		         <span class="text-muted">11:33</span>
+      	  	       </div>
+      	     </div>
+      	     <div class="row mt-3">
+      	  	       <div class="col-6 offset-6 col-lg-3 offset-lg-9 rounded chat-font chat-color">
+      	  		         My friend regarded it as scripted
+      	  		         <i class="fas fa-check"></i>
+      	  		         <i class="fas fa-check-square"></i>
+      	  		         <span class="text-muted">11:35</span>
+      	  	       </div>
+      	     </div>
+             <div class="row mt-3">
+      	  	        <div class="col-5 col-lg-4 rounded chat-font chat-color">
+      	  		          So what? The hardwork, stunts and passion are real
+      	  		          <span class="text-muted">11:36</span>
+      	  	       </div>
+      	     </div>
+      	     <div class="row mt-3">
+      	  	        <div class="col-6 offset-6 col-lg-2 offset-lg-10 rounded chat-font chat-color">
+      	  		          I know, you were the best.
+      	  		          <i class="fas fa-check"></i>
+      	  		          <i class="fas fa-check-square"></i>
+      	  		          <span class="text-muted">11:37</span>
+      	  	        </div>
+      	     </div>
+      	     <div class="row mt-3">
+      	  	       <div class="col-5 col-lg-4 rounded chat-font chat-color">
+      	  		          Trust me, I am now too.... believe me
+      	  		          <span class="text-muted">11:38</span>
+      	  	       </div>
+      	     </div>
+      	     <div class="row mt-3">
+      	  	       <div class="col-6 col-lg-4 offset-6 offset-lg-8 rounded chat-font chat-color">
+      	  		         But you are lost now, why are you not wrestling the way you used to?
+      	  		         <i class="fas fa-check"></i>
+      	  		         <i class="fas fa-check-square"></i>
+      	  		         <span class="text-muted">11:40</span>
+      	  	       </div>
+      	     </div>
+      	     <div class="row mt-3">
+      	  	        <div class="col-6 rounded chat-font chat-color">
+      	  		          I will, just remember "Hustle, Loyalty and Respect".
+      	  		          we wrestle with all our techniques and passion just to entertain you all, know it...
+      	  		          <span class="text-muted">11:42</span>
+      	  	        </div>
+      	     </div>
+      	     <div class="row mt-3">
+      	  	       <div class="col-6 offset-6 col-lg-4 offset-lg-8 rounded chat-font chat-color">
+      	  		         When are you all coming to India?
+      	  		         <i class="fas fa-check"></i>
+      	  		         <i class="fas fa-check-square"></i>
+      	  		         <span class="text-muted">11:43</span>
+      	  	       </div>
+      	     </div>
+      	     <div class="row mt-3">
+      	  	       <div class="col-6 rounded chat-font chat-color">
+      	  		         No such plans, as of now. Indians are nice people.
+      	  		         I, myself, have seen movies of SRK, he is a jolly character, quite humble..
+      	  		         <span class="text-muted">11:44</span>
+      	  	       </div>
+      	     </div>
+      	     <div class="row mt-2 border border-primary">
+      	  	        <div class="col-2 mt-2 col-md-2 col-lg-1 d-flex flex-row justify-content-around justify-content-lg-between">
+      	  		          <i class="fas fa-paperclip mr-3 mr-sm-0 mr-lg-3 chat-icon icon-color"></i>
+      	  		          <i class="fas fa-smile chat-icon icon-color"></i>
+      	  	       </div>
+      	  	       <div class="col-8 col-md-8 col-lg-10">
+      	  	  	        <input class="form-control chat-font" type="text" placeholder="Tap here to chat">
+                   </div>
+                   <div class="d-flex flex-row justify-content-around col-2 col-lg-1 pl-lg-4 mt-2">
+               	       <i class="far mr-1 fa-comment chat-icon icon-color"></i>
+               	       <i class="fas ml-2 fa-microphone chat-icon icon-color"></i>
+                   </div>
+      	     </div>
+         </div>
+     </div>
+     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+         <!--This is the profile tab, it contains profile pic changing option-->
+         <div class="container mt-5 pt-5" style="background-color:#EF5350">
+             <div class="row mt-1" style="height:40vh">
+                 <div class="col-12 mt-3 d-flex flex-row justify-content-center">
+                     <img src="profilePic.jpg" class="profile-pic rounded-circle">
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-12 flex-row justify-content-between mt-3">
+                      <h5 class="profile-text">Change your picture</h5>
+                      <button class="btn btn-outline-dark ml-1 mt-2 profile-text" style="color:white">Take a photo <i class="fas fa-camera"></i></button>
+                      <button class="btn btn-outline-dark ml-1 mt-2 profile-text" style="color:white">Choose from Gallery<i class="fas fa-file-image ml-2"></i></button>
+                 </div>
+             </div>
+             <div class="row">
+                  <div class="col-12">
+                       <div class="card mt-5 text-white bg-dark mt-2 mb-3">
+                            <div class="card-header d-flex flex-row justify-content-between profile-text">   Your Info <i class="fas fa-edit"></i>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                               <h5 class="card-title profile-text">Name</h5>
+                               <p class="card-text profile-text">Dhananjay</p>
+                               <h5 class="profile-text">Status</h5>
+                               <p class="card-text profile-text">Each of your choices will shape your destiny.</p>
+                               <h5 class="profile-text">Number</h5>
+                               <p class="card-text profile-text">9830149669</p>
+                            </div>
+                       </div>
+                  </div>
+             </div>
+         </div>
+     </div>
+ </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+ </body>
+</html>

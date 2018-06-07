@@ -1,0 +1,92 @@
+.font-color{
+	color: white;
+}
+.message-dp{
+	max-width: 80px;
+	height: 80px; 
+	overflow: hidden; 
+}
+.chat-dp{
+	max-width: 64px;
+	height:64px;
+	overflow:hidden;
+}
+.icon-color{
+	color:#EF5350;
+}
+.chat-color{
+	background-color: #EF5350;
+}
+.chat-font{
+	color:white;
+}
+.custom > .nav-item > .nav-link {
+	background-color: black;
+	color: #EF5350;
+}
+.custom > .nav-item > .active {
+	background-color: #EF5350; 
+	color:white;
+}
+ .profile-pic{
+ 	max-width:70%;
+ 	height:90%;
+ 	overflow:hidden;
+ }
+ .profile-text{
+ 	color:white;
+ }
+
+@media only screen and (min-width:992px)
+{  
+   .chat-dp{
+     max-width:70px;
+     height:70px;
+     overflow:hidden;
+	}
+   .chat-font{
+   	font-size: 1.25rem;
+   }
+   .contact-name{
+   	font-size: 1.5rem;
+   }
+   .chat-icon{
+   	font-size: 25px;
+   }
+    .profile-pic{
+    	max-width: 40%;
+    	overflow:hidden;
+    }
+}
+
+/*media query for devices like kindle fire hdx and ipad pro and larger devices*/
+@media only screen and (min-width:800px) and (min-height:1280px)
+{  
+   .chat-dp{
+     max-width:90px;
+     height:90px;
+     overflow:hidden;
+	}
+   .chat-font, .brand-font, .custom > .nav-item > .nav-link{
+   	font-size: 1.5rem;
+   }
+   .menu{
+   	font-size: 1.5rem;
+   }
+   .contact-name{
+   	font-size: 1.5rem;
+   }
+   .chat-icon{
+   	font-size: 25px;
+   }
+   .time, .name-pad, .icon-pad{
+   	padding-top: 1rem;
+   }
+   .profile-pic{
+   	 max-width: 60%;
+   	 overflow:hidden;
+   }
+   .profile-text{
+   	font-size: 2rem;
+   }
+}
